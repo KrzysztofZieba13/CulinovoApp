@@ -21,7 +21,7 @@ const controlAuth = async function (email, password, name, isRegister = false) {
 
     //move page to main page after 3 seconds
     setTimeout(() => {
-      window.location.href = `http://localhost:1234/index.html`;
+      window.location.pathname = `index.html`;
     }, 3000);
   }
 
@@ -38,10 +38,9 @@ const controlAuth = async function (email, password, name, isRegister = false) {
     onAuthStateChanged(auth, async (user) => {
       if (user) {
         const idTokenResult = await user.getIdTokenResult();
-        if (idTokenResult.claims.admin)
-          window.location.href = `http://localhost:1234/admin.html`;
+        if (idTokenResult.claims.admin) window.location.pathname = `admin.html`;
         else {
-          window.location.href = `http://localhost:1234/index.html`;
+          window.location.pathname = `index.html`;
         }
       }
     });

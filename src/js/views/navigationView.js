@@ -126,7 +126,7 @@ class navigationView extends View {
     const startsWith = clicked.getAttribute("href").startsWith("#");
     if (!startsWith && !this._admin) {
       if (this._user) signOut(this._auth);
-      return (window.location.href = "http://localhost:1234/auth.html");
+      return (window.location.pathname = "auth.html");
     }
     const scrollTo = document.querySelector(clicked.getAttribute("href"));
     if (!scrollTo) return (window.location.pathname = "auth.html");

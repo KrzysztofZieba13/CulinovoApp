@@ -26,11 +26,13 @@ class orderView extends View {
   _zipcodeError = document.querySelector(".order--error-zipcode");
 
   _feedbackModal = document.querySelector(".order-feedback");
+  _feedbackCloseBtn = document.querySelector(".feedback--order-x");
 
   constructor() {
     super();
     this._addListenerOrderForm();
     this._actionCard(this._orderCloseBtn);
+    this._closeFeedbackModal();
   }
 
   _addListenerOrderForm() {
@@ -77,6 +79,14 @@ class orderView extends View {
     this._feedbackModal.classList.remove("hidden");
     this._overlay.addEventListener("click", () => {
       this._feedbackModal.classList.add("hidden");
+    });
+  }
+
+  _closeFeedbackModal() {
+    this._feedbackCloseBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      this._feedbackModal.classList.add("hidden");
+      this._overlay.classList.add("hidden");
     });
   }
 
