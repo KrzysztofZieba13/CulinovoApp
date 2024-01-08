@@ -1,0 +1,110 @@
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/general.css" />
+    <link rel="stylesheet" href="./src/style/queries.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/img/icons/fork-knife.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./src/js/authController.js"></script>
+    <title>Culinovo - Smakowe Odkrycia na Talerzu!</title>
+  </head>
+  <body>
+    <div class="section-login">
+      <div class="logo logo-auth">
+        <a href="index.html">Culinovo<i class="ph ph-fork-knife"></i></a>
+      </div>
+
+      <!-- modal Login and register -->
+      <div class="auth-box">
+        <!-- login -->
+        <h3 class="third-header auth-header hidden">Witamy ponownie!</h3>
+        <form class="form-auth signIn-box hidden">
+          <label class="form-label label-login">Email</label>
+          <input type="text" class="form-input signIn--auth-login" />
+          <span class="hidden-visibility input-error--span signIn--error-email"
+            >message</span
+          >
+          <label class="form-label label-password">Hasło</label>
+          <input type="password" class="form-input signIn--auth-password" />
+          <span
+            class="hidden-visibility input-error--span signIn--error-password"
+            >message</span
+          >
+          <button class="login-btn" id="submit-login">Zaloguj</button>
+          <span class="hidden-visibility input-error--span form-error"
+            >message</span
+          >
+          <p class="auth-options">
+            Nie posiadasz konta?
+            <a href="#" class="switch-option">Zarejestruj się</a>
+          </p>
+        </form>
+
+        <!-- register -->
+        <h3 class="third-header auth-header">Dołącz do nas!</h3>
+        <form class="form-auth register-box">
+          <label class="form-label label-email" for="inputEmail">Email</label>
+          <input
+            type="email"
+            class="form-input register--auth-email"
+            id="inputEmail"
+          />
+          <span
+            class="hidden-visibility input-error--span register--error-email"
+            >message</span
+          >
+          <label class="form-label label-fname" for="inputName">Imię</label>
+          <input
+            type="text"
+            class="form-input register--auth-fname"
+            id="inputName"
+          />
+          <span
+            class="hidden-visibility input-error--span register--error-fname"
+            >message</span
+          >
+          <label class="form-label label-password" for="inputPassword"
+            >Hasło</label
+          >
+          <input
+            type="password"
+            class="form-input register--auth-password"
+            id="inputPassword"
+          />
+          <span
+            class="hidden-visibility input-error--span register--error-password"
+            >message</span
+          >
+          <button class="login-btn" id="submit-register">Zarejestruj</button>
+          <span class="hidden-visibility input-error--span form-error"
+            >message</span
+          >
+          <p class="auth-options">
+            Masz już konto?
+            <a href="#" class="switch-option">Zaloguj się</a>
+          </p>
+        </form>
+        <div class="register-feedback hidden">
+          <i class="ph ph-check-fat ph-success"></i>
+          <h3 class="third-header feedback-header">Witamy na pokładzie!</h3>
+          <p class="text-feedback">
+            Za chwilę przeniesiemy Cię na stronę główną
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

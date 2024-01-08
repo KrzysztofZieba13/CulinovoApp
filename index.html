@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/@phosphor-icons/web" async></script>
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/general.css" />
+    <link rel="stylesheet" href="./src/style/queries.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/img/icons/fork-knife.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./src/js/controller.js"></script>
+    <title>Culinovo - Smakowe Odkrycia na Talerzu!</title>
+  </head>
+  <body>
+    <!-- ////////LANDING PAGE//////// -->
+    <div class="overlay hidden"></div>
+    <section id="pageTop" class="section--landing-page">
+      <header class="header">
+        <div class="logo">
+          <a href="#">Culinovo<i class="ph ph-fork-knife"></i></a>
+        </div>
+        <nav class="nav">
+          <a href="#" class="nav-link nav-link__notifications hidden">
+            <i class="ph ph-bell ph-white"></i>
+            <span class="notifications-amount hidden"></span>
+          </a>
+          <a href="#" class="nav-link nav-link__basket">
+            <i class="ph ph-basket ph-white sign-in--basket"></i>
+            <span class="items--in-basket hidden"></span>
+          </a>
+          <a href="#" class="nav-link nav-link__archive hidden">
+            <i class="ph ph-archive ph-white"></i>
+          </a>
+          <a
+            href="admin.html"
+            class="nav-link nav-link__admin admin-nav hidden"
+          >
+            <i class="ph ph-gear-six ph-white"></i>
+          </a>
+          <a href="auth.html" class="nav-link nav-link__login">
+            <i class="ph ph-sign-in ph-white"></i>
+          </a>
+          <a href="#" class="nav-link nav-link__logout hidden">
+            <i class="ph ph-sign-out ph-white"></i>
+          </a>
+        </nav>
+      </header>
+      <div class="hero">
+        <div class="hero--left-nav">
+          <h1 class="primary-header">Smakowe odkrycia na talerzu!</h1>
+          <p class="text hero-text">
+            Doświadcz wyrafinowanych połączeń smaków i aromatów, które sprawią,
+            że Twoje podniebienie tańczy ze szczęścia. Nie przegap okazji na
+            kulinarne uniesienie - zamów teraz i pozwól, by Culinovo wypełniło
+            Twój dzień smakiem!
+          </p>
+          <a href="#menu" class="hero-btn" data-is-admin="false"
+            ><span>Menu <i class="ph ph-arrow-down"></i></span
+          ></a>
+        </div>
+        <div class="hero--right-nav grid grid--3-cols">
+          <a href="#pizza-menu" class="menu--panel-field" data-cat="pizza"
+            ><i class="ph ph-pizza"></i><span>Pizza</span></a
+          >
+          <a href="#burgers-menu" class="menu--panel-field" data-cat="burgers"
+            ><i class="ph ph-hamburger"></i><span>Hamburgery</span></a
+          >
+          <a href="#pasta-menu" class="menu--panel-field" data-cat="pasta"
+            ><i class="ph ph-bowl-food"></i><span>Makarony</span></a
+          >
+          <a href="#seafood-menu" class="menu--panel-field" data-cat="seafood"
+            ><i class="ph ph-shrimp"></i><span>Owoce Morza</span></a
+          >
+          <a href="#desserts-menu" class="menu--panel-field" data-cat="desserts"
+            ><i class="ph ph-ice-cream"></i><span>Desery</span></a
+          >
+          <a
+            href="#hotDrinks-menu"
+            class="menu--panel-field"
+            data-cat="hotDrinks"
+            ><i class="ph ph-coffee"></i><span>Napoje Gorące</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- //////// MENU ////////  -->
+    <section class="section-menu" id="menu">
+      <a href="#pageTop" class="btn--go-top">
+        <span><i class="arrow--go-top ph ph-arrow-up"></i></span>
+      </a>
+      <span class="subtitle">Menu</span>
+      <h2 class="secondary-header">Możemy Ci zaproponować</h2>
+      <div class="accordion">
+        <div
+          class="accordion-bar accordion--bar-pizza"
+          id="pizza-menu"
+          data-cat="pizza"
+        >
+          Pizza
+          <i class="ph-accordion ph ph-caret-down"></i>
+          <i class="ph-accordion ph ph-caret-up hidden"></i>
+        </div>
+        <div class="accordion--menu-container menu-pizza hidden"></div>
+        <div
+          class="accordion-bar accordion--bar-burgers"
+          id="burgers-menu"
+          data-cat="burgers"
+        >
+          Hamburgery
+          <i class="ph-accordion ph ph-caret-down"></i>
+          <i class="ph-accordion ph ph-caret-up hidden"></i>
+        </div>
+        <div class="accordion--menu-container menu-burgers hidden"></div>
+        <div
+          class="accordion-bar accordion--bar-pasta"
+          id="pasta-menu"
+          data-cat="pasta"
+        >
+          Makarony
+          <i class="ph-accordion ph ph-caret-down"></i>
+          <i class="ph-accordion ph ph-caret-up hidden"></i>
+        </div>
+        <div class="accordion--menu-container menu-pasta hidden"></div>
+        <div
+          class="accordion-bar accordion--bar-seafood"
+          id="seafood-menu"
+          data-cat="seafood"
+        >
+          Owoce Morza
+          <i class="ph-accordion ph ph-caret-down"></i>
+          <i class="ph-accordion ph ph-caret-up hidden"></i>
+        </div>
+        <div class="accordion--menu-container menu-seafood hidden"></div>
+        <div
+          class="accordion-bar accordion--bar-desserts"
+          id="desserts-menu"
+          data-cat="desserts"
+        >
+          Desery
+          <i class="ph-accordion ph ph-caret-down"></i>
+          <i class="ph-accordion ph ph-caret-up hidden"></i>
+        </div>
+        <div class="accordion--menu-container menu-desserts hidden"></div>
+        <div
+          class="accordion-bar accordion--bar-hotDrinks"
+          id="hotDrinks-menu"
+          data-cat="hotDrinks"
+        >
+          Napoje Gorące
+          <i class="ph-accordion ph ph-caret-down"></i>
+          <i class="ph-accordion ph ph-caret-up hidden"></i>
+        </div>
+        <div class="accordion--menu-container menu-hotDrinks hidden"></div>
+      </div>
+    </section>
+
+    <!-- //////// checkout FORM ////////  -->
+    <section class="section-checkout hide-section">
+      <i class="ph ph-x checkout-close"></i>
+      <h3 class="third-header checkout-header form-checkout--order">Koszyk</h3>
+      <div class="checkout-items"></div>
+      <div class="trash-btn">
+        <i class="ph ph-trash"></i>
+      </div>
+      <div class="btn--confirm-order btn-checkout">
+        <p
+          class="checkout--order-value"
+          data-total-price="0"
+          data-checkout-length="0"
+        >
+          Dodaj produkty
+        </p>
+      </div>
+    </section>
+
+    <!-- //////// ORDER FORM ////////  -->
+    <section class="section-order hide-section">
+      <i class="ph ph-x order-close"></i>
+      <h3 class="third-header form--order-header form-checkout--order">
+        Dane zamówienia
+      </h3>
+      <form class="form-order">
+        <label for="name" class="form-label">Imię</label>
+        <input type="text" id="name" class="form-input input-order" />
+        <span class="hidden-visibility input-error--span order--error-name"
+          >Błąd! Wypełnij pole</span
+        >
+        <label for="last-name" class="form-label">Nazwisko</label>
+        <input type="text" id="last-name" class="form-input input-order" />
+        <span class="hidden-visibility input-error--span order--error-lastname"
+          >Błąd! Wypełnij pole</span
+        >
+        <label for="address-city" class="form-label">Miasto</label>
+        <input type="text" id="address-city" class="form-input input-order" />
+        <span class="hidden-visibility input-error--span order--error-city"
+          >Błąd! Wypełnij pole</span
+        >
+        <label for="address-street" class="form-label">Ulica</label>
+        <input type="text" id="address-street" class="form-input input-order" />
+        <span class="hidden-visibility input-error--span order--error-street"
+          >Błąd! Wypełnij pole</span
+        >
+        <div class="postal--numer-building">
+          <div class="numer-building">
+            <label for="numer-building" class="form-label">Numer</label>
+            <input
+              type="text"
+              class="form-input input-order input-zipcode"
+              id="numer-building"
+              maxlength="4"
+            />
+            <span
+              class="hidden-visibility input-error--span order--error-numerBuilding"
+              >Błąd! Wypełnij pole</span
+            >
+          </div>
+          <div class="postal">
+            <label for="zipcode" class="form-label">Kod pocztowy</label>
+            <input
+              type="text"
+              class="form-input input-order input-zipcode"
+              id="zipcode"
+              placeholder="00-000"
+              pattern="\d{2}-\d{3}"
+              maxlength="6"
+            />
+            <span
+              class="hidden-visibility input-error--span order--error-zipcode"
+              >Błąd! Wypełnij pole</span
+            >
+          </div>
+        </div>
+        <p class="payment">
+          <i class="ph ph-hand-coins payment-icon"></i
+          ><span class="payment-description"
+            >płatność tylko przy odbiorze!</span
+          >
+        </p>
+        <button class="form--order-btn btn--confirm-order"></button>
+      </form>
+    </section>
+
+    <!-- ///////// ORDER FEEDBACK /////////-->
+    <div class="order-feedback hidden">
+      <i class="ph ph-x feedback--order-x"></i>
+      <div class="order--feedback-icon">
+        <i class="ph ph-check-fat"></i>
+      </div>
+      <h2 class="secondary-header">Gratulacje!</h2>
+      <p class="text order--feedback-text">
+        Twoje zamówienie zostało przekazane do realizacji!<br />
+        <span class="feedback-notification hidden">
+          <i class="ph ph-bell bell-feedback"></i>
+          <i class="ph ph-arrow-left arrow-feedback"></i> Sprawdź stan
+          zamówienia
+        </span>
+      </p>
+    </div>
+
+    <!-- //////// ORDERS ARCHIVE FORM ////////  -->
+    <section class="section-orders--archive hide-section">
+      <i class="ph ph-x archive-close"></i>
+      <h3 class="third-header form--order-header form-checkout--order">
+        Historia Zamówień
+      </h3>
+      <div class="archive"></div>
+    </section>
+
+    <!-- //////// NOTIFICATION CARD ////////  -->
+    <section class="section--notification-card hide-section">
+      <i class="ph ph-x notification-close"></i>
+      <h3 class="third-header form--order-header form-checkout--order">
+        Powiadomienia
+      </h3>
+      <div class="notifications"></div>
+    </section>
+
+    <!-- //////// FOOTER ////////  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="grid grid--3-cols footer-grid">
+          <div class="footer--nav-1">
+            <h3 class="third-header header-footer">
+              <a href="#">Culinovo<i class="ph ph-fork-knife"></i> </a>
+            </h3>
+            <p class="find-us">Find us</p>
+            <ul class="footer-list">
+              <li><i class="ph ph-facebook-logo ph-white"></i></li>
+              <li><i class="ph ph-instagram-logo ph-white"></i></li>
+              <li><i class="ph ph-twitter-logo ph-white"></i></li>
+              <li><i class="ph ph-github-logo ph-white"></i></li>
+            </ul>
+          </div>
+          <ul class="footer--nav-2">
+            <li><a href="#">Start</a></li>
+            <li><a href="#">Oferta Dnia</a></li>
+            <li><a href="#">Menu</a></li>
+          </ul>
+          <ul class="footer--nav-3">
+            <li><a href="#">Zaloguj</a></li>
+            <li><a href="#">Regulamin</a></li>
+            <li class="footer--go-top"><a href="#">Na górę &uparrow;</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

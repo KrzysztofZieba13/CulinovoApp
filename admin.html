@@ -1,0 +1,89 @@
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/general.css" />
+    <link rel="stylesheet" href="./src/style/queries.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/img/icons/fork-knife.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./src/js/adminController.js"></script>
+    <title>Culinovo - Admin</title>
+  </head>
+  <body>
+    <div class="overlay hidden"></div>
+    <a href="#pageTop" class="btn--go-top">
+      <span><i class="arrow--go-top ph ph-arrow-up"></i></span>
+    </a>
+    <section
+      id="pageTop"
+      class="section--landing-page admin admin--landing-page"
+    >
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">Culinovo<i class="ph ph-fork-knife"></i></a>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link nav-link__main admin-nav">
+            <i class="ph ph-house ph-white"></i>
+          </a>
+          <a href="auth.html" class="nav-link nav-link__login admin-login">
+            <i class="ph ph-sign-in ph-white"></i>
+          </a>
+          <a href="#" class="nav-link nav-link__logout admin-logout hidden">
+            <i class="ph ph-sign-out ph-white"></i>
+          </a>
+        </nav>
+      </header>
+      <div class="admin-hero">
+        <h1 class="primary-header admin-header"></h1>
+        <div>
+          <a
+            href="http://localhost:1234/auth.html"
+            class="hero-btn admin--hero-btn"
+            data-is-admin="true"
+            >Zarządzaj</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ////// ADMIN PANEL ACCEPT/REJECT ORDER //////  -->
+    <div class="admin-content" id="adminContent"></div>
+
+    <!-- //////// FOOTER ////////  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="grid grid--3-cols footer-grid">
+          <div class="footer--nav-1">
+            <h3 class="third-header header-footer">
+              <a href="#">Culinovo<i class="ph ph-fork-knife"></i> </a>
+            </h3>
+            <p class="find-us">Find us</p>
+            <ul class="footer-list">
+              <li><i class="ph ph-facebook-logo ph-white"></i></li>
+              <li><i class="ph ph-instagram-logo ph-white"></i></li>
+              <li><i class="ph ph-twitter-logo ph-white"></i></li>
+              <li><i class="ph ph-github-logo ph-white"></i></li>
+            </ul>
+          </div>
+          <ul class="footer--nav-2"></ul>
+          <ul class="footer--nav-3">
+            <li class="footer--go-top"><a href="#">Na górę &uparrow;</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
