@@ -543,7 +543,8 @@
   transform: translateX(105%);
 }
 
-.section-checkout {
+.section-checkout,
+.section-order {
   width: 45rem;
   background-color: #fff;
   display: flex;
@@ -553,10 +554,16 @@
   top: 0;
   right: 0;
   box-shadow: 0 0 19px 1px rgba(200, 200, 200, 0.3);
-  padding: 3.2rem;
   justify-content: flex-start;
   transition: all 0.3s;
   z-index: 10;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3.2rem;
+  overflow: scroll;
 }
 
 .checkout-close,
@@ -574,7 +581,6 @@
 .checkout-items {
   margin-top: 1.6rem;
   overflow: scroll;
-  margin-bottom: 3.5rem;
 }
 
 .checkout-items::-webkit-scrollbar,
@@ -586,7 +592,7 @@
 
 .trash-btn {
   position: absolute;
-  bottom: 3rem;
+  bottom: 8rem;
   right: 1.2rem;
   margin-bottom: 5rem;
   font-size: 3.2rem;
@@ -597,14 +603,19 @@
 
 .trash-btn i {
   background-color: var(--main-red-color);
-  padding: 0.8rem;
+  padding: 1.2rem;
   border-radius: 7px;
   color: #fff;
 }
 
+.checkout-header,
+.form--order-header {
+  padding: 3.2rem 3.2rem 0 3.2rem;
+}
+
 .checkout--summary-item {
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
   display: flex;
   gap: 2.4rem;
   border-bottom: 2px solid var(--main-bg-color);
@@ -654,13 +665,12 @@
 
 .btn--confirm-order {
   background-color: var(--main-bg-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 7rem;
+  margin-top: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   width: 100%;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -677,7 +687,7 @@
 /**************************************/
 /* /////// SECTION ORDER FORM /////// */
 /**************************************/
-.section-order {
+/* .section-order {
   width: 45rem;
   background-color: #fff;
   display: flex;
@@ -692,7 +702,7 @@
   height: 100vh;
   box-shadow: 0 0 19px 1px rgba(200, 200, 200, 0.3);
   transition: all 0.3s;
-}
+} */
 
 .form-order {
   display: flex;
@@ -702,10 +712,6 @@
   height: 90vh;
   overflow: scroll;
   padding: 0 0.4rem 0 0.4rem;
-}
-
-.form--order-header {
-  margin-bottom: 3.2rem;
 }
 
 .form-checkout--order::after {

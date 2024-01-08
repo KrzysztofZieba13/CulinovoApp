@@ -170,9 +170,11 @@
     <section class="section-checkout hide-section">
       <i class="ph ph-x checkout-close"></i>
       <h3 class="third-header checkout-header form-checkout--order">Koszyk</h3>
-      <div class="checkout-items"></div>
-      <div class="trash-btn">
-        <i class="ph ph-trash"></i>
+      <div class="checkout-container">
+        <div class="checkout-items"></div>
+        <div class="trash-btn">
+          <i class="ph ph-trash"></i>
+        </div>
       </div>
       <div class="btn--confirm-order btn-checkout">
         <p
@@ -191,65 +193,67 @@
       <h3 class="third-header form--order-header form-checkout--order">
         Dane zamówienia
       </h3>
-      <form class="form-order">
-        <label for="name" class="form-label">Imię</label>
-        <input type="text" id="name" class="form-input input-order" />
-        <span class="hidden-visibility input-error--span order--error-name"
-          >Błąd! Wypełnij pole</span
-        >
-        <label for="last-name" class="form-label">Nazwisko</label>
-        <input type="text" id="last-name" class="form-input input-order" />
-        <span class="hidden-visibility input-error--span order--error-lastname"
-          >Błąd! Wypełnij pole</span
-        >
-        <label for="address-city" class="form-label">Miasto</label>
-        <input type="text" id="address-city" class="form-input input-order" />
-        <span class="hidden-visibility input-error--span order--error-city"
-          >Błąd! Wypełnij pole</span
-        >
-        <label for="address-street" class="form-label">Ulica</label>
-        <input type="text" id="address-street" class="form-input input-order" />
-        <span class="hidden-visibility input-error--span order--error-street"
-          >Błąd! Wypełnij pole</span
-        >
-        <div class="postal--numer-building">
-          <div class="numer-building">
-            <label for="numer-building" class="form-label">Numer</label>
-            <input
-              type="text"
-              class="form-input input-order input-zipcode"
-              id="numer-building"
-              maxlength="4"
-            />
-            <span
-              class="hidden-visibility input-error--span order--error-numerBuilding"
-              >Błąd! Wypełnij pole</span
-            >
-          </div>
-          <div class="postal">
-            <label for="zipcode" class="form-label">Kod pocztowy</label>
-            <input
-              type="text"
-              class="form-input input-order input-zipcode"
-              id="zipcode"
-              placeholder="00-000"
-              pattern="\d{2}-\d{3}"
-              maxlength="6"
-            />
-            <span
-              class="hidden-visibility input-error--span order--error-zipcode"
-              >Błąd! Wypełnij pole</span
-            >
-          </div>
-        </div>
-        <p class="payment">
-          <i class="ph ph-hand-coins payment-icon"></i
-          ><span class="payment-description"
-            >płatność tylko przy odbiorze!</span
+      <div class="checkout-container">
+        <form class="form-order">
+          <label for="name" class="form-label">Imię</label>
+          <input type="text" id="name" class="form-input input-order" />
+          <span class="hidden-visibility input-error--span order--error-name"
+            >Błąd! Wypełnij pole</span
           >
-        </p>
-        <button class="form--order-btn btn--confirm-order">Potwierdź</button>
-      </form>
+          <label for="last-name" class="form-label">Nazwisko</label>
+          <input type="text" id="last-name" class="form-input input-order" />
+          <span class="hidden-visibility input-error--span order--error-lastname"
+            >Błąd! Wypełnij pole</span
+          >
+          <label for="address-city" class="form-label">Miasto</label>
+          <input type="text" id="address-city" class="form-input input-order" />
+          <span class="hidden-visibility input-error--span order--error-city"
+            >Błąd! Wypełnij pole</span
+          >
+          <label for="address-street" class="form-label">Ulica</label>
+          <input type="text" id="address-street" class="form-input input-order" />
+          <span class="hidden-visibility input-error--span order--error-street"
+            >Błąd! Wypełnij pole</span
+          >
+          <div class="postal--numer-building">
+            <div class="numer-building">
+              <label for="numer-building" class="form-label">Numer</label>
+              <input
+                type="text"
+                class="form-input input-order input-zipcode"
+                id="numer-building"
+                maxlength="4"
+              />
+              <span
+                class="hidden-visibility input-error--span order--error-numerBuilding"
+                >Błąd! Wypełnij pole</span
+              >
+            </div>
+            <div class="postal">
+              <label for="zipcode" class="form-label">Kod pocztowy</label>
+              <input
+                type="text"
+                class="form-input input-order input-zipcode"
+                id="zipcode"
+                placeholder="00-000"
+                pattern="\d{2}-\d{3}"
+                maxlength="6"
+              />
+              <span
+                class="hidden-visibility input-error--span order--error-zipcode"
+                >Błąd! Wypełnij pole</span
+              >
+            </div>
+          </div>
+          <p class="payment">
+            <i class="ph ph-hand-coins payment-icon"></i
+            ><span class="payment-description"
+              >płatność tylko przy odbiorze!</span
+            >
+          </p>
+        </div>
+          <button class="form--order-btn btn--confirm-order">Potwierdź</button>
+        </form>
     </section>
 
     <!-- ///////// ORDER FEEDBACK /////////-->
