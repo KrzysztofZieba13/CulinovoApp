@@ -1,5 +1,5 @@
 # [EN] Culinovo Project
-
+[CulinovoApp](https://culinovo-db.firebaseapp.com/index.html)<br>
 Culinovo is a web application written in Vanilla JavaScript using the Model-View-Controller (MVC) architecture. The project utilizes Firebase for backend operations, with data stored in the Realtime Database. The database handles information such as user emails, menu products, notifications, order history, and the queue of orders for admin management. To ensure security, the database is protected by specific rules.
 
 ## Features
@@ -45,7 +45,7 @@ Feel free to explore the functionalities using the provided example accounts. Fo
 
 
 # [PL] Projekt Culinovo
-
+[CulinovoApp](https://culinovo-db.firebaseapp.com/index.html)<br>
 Culinovo to aplikacja internetowa napisana w Vanilla JavaScript, wykorzystująca architekturę Model-View-Controller (MVC). Projekt korzysta z Firebase jako backendu, a dane przechowywane są w bazie danych czasu rzeczywistego. Baza danych zawiera informacje takie jak maile użytkowników, produkty w menu, powiadomienia dla użytkowników, historia zamówień oraz kolejka zamówień do zarządzania przez administratora. Aby zapewnić bezpieczeństwo, baza danych jest zabezpieczona określonymi regułami.
 
 ## Funkcje
